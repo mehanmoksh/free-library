@@ -8,6 +8,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideRouter(routes, withHashLocation()),
+    //provideRouter(routes, withHashLocation()),
   ]
 };
