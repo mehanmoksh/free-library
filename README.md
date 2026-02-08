@@ -1,59 +1,150 @@
-# FreeLibrary
+📚 FreeLibrary — Modern Book Summary Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+🔗 Live Demo: https://free-library-app.netlify.app/
 
-## Development server
+🔗 GitHub Repository: https://github.com/mehanmoksh/free-library
 
-To start a local development server, run:
+✨ Overview:
 
-```bash
-ng serve
-```
+FreeLibrary is a modern, aesthetic Angular web application designed to help readers discover powerful ideas from books through structured summaries in a calm, cozy, café-inspired interface.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The platform focuses on delivering a smooth reading experience with fast navigation, intelligent search, and beautiful UI — making learning feel effortless and enjoyable.
 
-## Code scaffolding
+🚀 Key Features:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 🔍 Real-time search with live suggestions
 
-```bash
-ng generate component component-name
-```
+- 📖 Short & detailed summaries for each book
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- ⭐ Developer’s Top Picks & Featured books
 
-```bash
-ng generate --help
-```
+- 🧠 Category & Author filtering
 
-## Building
+- 💡 Popup preview without page reload
 
-To build the project run:
+- 📱 Fully responsive across all devices
 
-```bash
-ng build
-```
+- ⚡ Fast client-side navigation using Angular Router
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- 🎯 Clean UI inspired by cozy reading environments
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+🧱 Tech Stack:
 
-```bash
-ng test
-```
+. Angular (Standalone Components)
 
-## Running end-to-end tests
+. TypeScript
 
-For end-to-end (e2e) testing, run:
+. RxJS
 
-```bash
-ng e2e
-```
+. Bootstrap + Custom CSS
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+. Angular Router
 
-## Additional Resources
+. Netlify (Deployment)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+. GitHub (Version Control)
+
+🧠 Architecture Highlights
+
+Project follows clean, scalable structure:
+
+src/
+ ├── components/    → reusable UI components
+ ├── pages/         → routed page components
+ ├── services/      → state management & business logic
+ ├── models/        → type definitions
+ ├── assets/        → images & static resources
+
+Key patterns used:
+
+. Service-based state sharing
+. Component-driven architecture
+. Standalone Angular components
+. Reactive search using RxJS
+. Clean separation of concerns
+
+⚙️ Engineering Challenges Solved:
+Angular Routing (Production 404 Fix)
+
+Problem: Angular routes broke on refresh after deployment.
+
+Solution:
+
+Implemented two solutions:
+
+In this case, using web.config file in public folder
+Other solution, using hash routes in app.config.ts file
+
+
+
+Result: All routes work correctly in production.
+
+Static Build & Deployment
+
+Configured Angular production build and Netlify deployment pipeline:
+
+ng build <br>
+npx serve dist/free-library/browser <br>
+Advanced UI/UX Implementation <br>
+
+Implemented modern UX features:
+
+- Overlay popup system
+
+- Sticky responsive header
+
+- Real-time search suggestions
+
+- Touch-enabled banner slider
+
+- Highlighted search matches
+
+🌐 Deployment
+
+Deployed using:
+
+1. GitHub → Version control
+
+2. Netlify → Production hosting
+
+3. Angular production build system
+
+📸 UI Philosophy:
+
+FreeLibrary is designed to feel like: Sitting in a cozy café with a cup of coffee, exploring ideas peacefully.
+
+Focus areas:
+
+- calm color palette
+- smooth animations
+- distraction-free reading
+- aesthetic layout
+
+🧪 Local Development
+git clone https://github.com/mehanmoksh/free-library.git
+
+cd free-library <br>
+npm install <br>
+ng serve <br>
+
+Build production version:
+ng build <br>
+
+👨‍💻 Author: Moksh Mehan
+- Associate Software Engineer
+- Angular • PHP • Laravel • Full Stack Development
+
+🎯 Why This Project Matters
+
+- This project demonstrates:
+
+- Strong Angular fundamentals
+
+- Production deployment skills
+
+- Real-world debugging ability
+
+- UI/UX engineering capability
+
+- Scalable frontend architecture design
