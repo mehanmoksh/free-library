@@ -1,0 +1,41 @@
+<div class="container mt-5 latest_read_page_container">
+
+  <h1 class="latest-title text-center-text-class">
+    Latest Reads
+  </h1>
+
+  <p class="latest-sub text-center-text-class">
+    Fresh knowledge, recently added.
+  </p>
+
+  <div class="row g-4 mt-4">
+
+    <div
+      class="col-lg-3 col-md-4 col-sm-6 book-animate"
+      *ngFor="let book of filteredBooks"
+    >
+
+      <app-book-card
+        [book]="book">
+        [searchTerm]="searchTerm"
+      </app-book-card>
+
+    </div>
+
+  </div>
+
+    <div *ngIf="visibleBooks.length === 0" class="no-results">
+    <h4>Searched Book - Not Found. Missing your favourite read???</h4>
+
+    <p>
+      Give us your suggestion
+      <a href="/#suggestion-section-id"> here</a>
+    </p>
+
+    <p>
+      Meantime, explore
+      <a routerLink="/latest_reads" (click)="clearSearch()"> Latest Reads </a>
+    </p>
+  </div>
+
+</div>

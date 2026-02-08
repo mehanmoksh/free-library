@@ -1,0 +1,51 @@
+<div class="menu-overlay" (click)="closeMenu()">
+
+  <!-- Prevent close when clicking inside popup -->
+  <div class="menu-popup" (click)="$event.stopPropagation()">
+
+    <!-- Close button -->
+    <div class="close-btn" (click)="closeMenu()">
+      ✕
+    </div>
+
+    <div class="menu-content">
+
+      <!-- LEFT SIDE -->
+      <div class="menu-left">
+
+        <a routerLink="/" (click)="closeMenu()">Home</a>
+
+        <a routerLink="/latest_reads" (click)="closeMenu()">Latest Reads</a>
+
+        <a routerLink="/authors" (click)="closeMenu()">Authors</a>
+
+        <a routerLink="/all_categories" (click)="closeMenu()">Categories</a>
+
+        <a routerLink="/about" (click)="closeMenu()">About Us</a>
+
+        <a href="/#/#suggestion-section-id" (click)="closeMenu()">Any Suggestions?</a>
+
+      </div>
+
+
+      <!-- RIGHT SIDE -->
+      <div class="menu-right">
+
+        <img
+          src="/assets/images/books/menu-image.jpg"
+          class="menu-image"
+        >
+
+        <div class="menu-text">
+
+          FreeLibrary is a modern digital platform designed to help readers discover powerful ideas from books across the world in a beautiful and structured way.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

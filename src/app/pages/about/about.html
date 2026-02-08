@@ -1,0 +1,142 @@
+<!-- HERO BANNER -->
+<section class="about-hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+
+    <h1 class="hero-title">
+      Discover Powerful Ideas From The World's Greatest Books
+    </h1>
+
+    <p class="hero-subtitle">
+      FreeLibrary transforms complex books into clear, structured, and beautiful summaries
+      — helping you learn faster, grow smarter, and unlock life-changing knowledge.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- MAIN ABOUT CONTENT -->
+<div class="container about-container">
+
+  <!-- INTRO -->
+  <section class="about-section">
+
+    <h2>What is FreeLibrary?</h2>
+
+    <p>
+      FreeLibrary is a modern digital reading platform built for curious minds who want to learn,
+      grow, and explore powerful ideas from books — without needing to read hundreds of pages.
+    </p>
+
+    <p>
+      We provide beautifully structured short and detailed summaries of the world’s most impactful books,
+      making knowledge accessible, enjoyable, and practical for everyone.
+    </p>
+
+  </section>
+
+
+  <!-- MISSION -->
+  <section class="about-section">
+
+    <h2>Our Mission</h2>
+
+    <p>
+      Our mission is simple — to make life-changing ideas accessible to everyone.
+      We believe books contain knowledge that can transform careers, mindset, health,
+      and personal growth.
+    </p>
+
+    <p>
+      FreeLibrary helps you discover those ideas faster, understand them clearly,
+      and apply them in your real life.
+    </p>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="about-section">
+
+    <h2>What You Can Do on FreeLibrary</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <h4>📚 Read Powerful Summaries</h4>
+        <p>
+          Get short and detailed summaries of bestselling and life-changing books.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4>⚡ Learn Faster</h4>
+        <p>
+          Understand core ideas in minutes instead of spending hours reading full books.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4>🛒 Buy Books Easily</h4>
+        <p>
+          Access direct links to buy hardcover books from Amazon or read eBooks on Kindle.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4>🌎 Discover Global Authors</h4>
+        <p>
+          Explore books and ideas from authors across the world.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY FREE LIBRARY -->
+  <section class="about-section">
+
+    <h2>Why FreeLibrary is Different</h2>
+
+    <p>
+      FreeLibrary is designed with simplicity, beauty, and clarity at its core.
+      Every summary is carefully structured so you can easily understand and remember key ideas.
+    </p>
+
+    <p>
+      Our goal is not just to summarize books, but to help you transform your thinking,
+      improve your decision-making, and grow into your best self.
+    </p>
+
+  </section>
+
+
+  <!-- FAMOUS BOOKS -->
+  <section class="about-section">
+
+    <h2 class="mb-4 famous_book_title">
+      Famous Books on FreeLibrary
+    </h2>
+
+    <div class="row">
+
+      <div
+        class="col-md-3 col-sm-6 mb-4"
+        *ngFor="let book of books"
+      >
+
+        <app-book-card [book]="book"></app-book-card>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

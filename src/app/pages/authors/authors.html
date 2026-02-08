@@ -1,0 +1,31 @@
+<div class="container mt-5 category_wrapper">
+
+  <h1 class="premium-title">
+    Explore Authors
+  </h1>
+
+  <p class="premium-subtitle">
+    Discover books from legendary thinkers and storytellers
+  </p>
+
+  <div class="authors-premium-grid">
+
+    <div
+      class="author-premium-card"
+      *ngFor="let author of authors"
+      [routerLink]="['/authors', author]"
+    >
+
+      <div class="author-avatar">
+        {{ author.charAt(0) }}
+      </div>
+
+      <div class="author-name">
+        {{ author }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,202 @@
+/* banner-slider.component.css */
+.banner-slide {
+  height: 320px;
+  background: linear-gradient(to right, #ffe6f0, #ffffff);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.banner-img {
+  height: 240px;
+  border-radius: 12px;
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+
+.banner-wrapper {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.banner-container {
+
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.banner-slide {
+
+  display: none;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #fff,
+    #ffe6f2
+  );
+
+}
+
+.banner-slide.active {
+
+  display: flex;
+  animation: fade 0.6s ease;
+
+}
+
+.banner-img {
+
+  height: 250px;
+  border-radius: 15px;
+
+}
+
+.banner-arrow {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: white;
+  border: 2px solid #ff6fae;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+}
+
+.banner-arrow.left {
+  left: 0;
+}
+
+.banner-arrow.right {
+  right: 0;
+}
+
+.banner-arrow:hover {
+
+  background: #ff6fae;
+  color: white;
+
+}
+
+.badge{
+  margin-right: .5rem;
+}
+
+@keyframes fade {
+
+  from { opacity: 0; }
+  to { opacity: 1; }
+
+}
+
+.banner-container {
+
+  overflow: hidden;
+
+  width: 100%;
+
+  touch-action: pan-y;
+
+}
+
+.banner-slide {
+
+  touch-action: pan-y;
+
+  user-select: none;
+
+}
+
+/* responsive */
+
+/* ============================= */
+/* RESPONSIVE BANNER FIX */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+  .banner-slide {
+
+    flex-direction: column;
+
+    text-align: center;
+
+    height: auto;
+
+    padding: 24px;
+
+    gap: 16px;
+
+  }
+
+  .banner-img {
+
+    height: 200px;
+
+    /* max-width: 160px; */
+
+  }
+
+  .banner-content {
+
+    width: 100%;
+
+  }
+
+  .banner-content h2 {
+
+    font-size: 20px;
+
+  }
+
+  .banner-content p {
+
+    font-size: 14px;
+
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 648px) {
+
+  .banner-slide {
+
+    padding: 20px 16px;
+
+  }
+
+  .banner-img {
+
+    /* height: 180px;
+
+    max-width: 140px; */
+
+  }
+
+  .banner-arrow {
+
+    width: 36px;
+    height: 36px;
+
+  }
+
+}

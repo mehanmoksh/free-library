@@ -1,0 +1,179 @@
+/* HERO SECTION */
+
+.about-hero {
+
+  height: 420px;
+
+  background-image: url('/assets/images/books/about-banner.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+
+}
+
+.hero-overlay {
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.4)
+  );
+
+}
+
+.hero-content {
+
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero-title {
+
+  font-size: 48px;
+  font-weight: 700;
+
+  max-width: 700px;
+
+}
+
+.hero-subtitle {
+
+  font-size: 20px;
+
+  margin-top: 20px;
+
+  max-width: 600px;
+
+  opacity: 0.9;
+
+}
+
+
+/* ABOUT CONTENT */
+
+.about-container {
+
+  padding-top: 60px;
+  /* padding-bottom: 80px; */
+
+}
+
+.about-section {
+
+  margin-bottom: 60px;
+
+}
+
+.about-section h2 {
+
+  font-size: 32px;
+  margin-bottom: 20px;
+
+
+  color: deeppink;
+
+}
+
+.about-section p {
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #444;
+
+}
+
+
+/* FEATURES GRID */
+
+.features-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+}
+
+.feature-card {
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+
+}
+
+.feature-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+.feature-card h4 {
+
+  margin-bottom: 10px;
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero-title {
+
+    font-size: 32px;
+
+  }
+
+  .hero-subtitle {
+
+    font-size: 16px;
+
+  }
+
+}
+
+@media (max-width: 576px){
+  .about-section h2 {
+
+    font-size: 26px;  
+  }
+
+  .about-container {
+
+    padding-top: 40px;
+
+  }
+
+
+  .about-section {
+      margin-bottom: 30px;
+  }
+
+  .famous_book_title{
+    text-align: center;
+  }
+}

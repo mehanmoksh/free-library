@@ -1,0 +1,115 @@
+.suggestion-section {
+
+  margin-top: 80px;
+
+}
+
+.suggestion-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #ffe6f2
+    );
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.suggestion-title {
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+
+}
+
+.suggestion-subtitle {
+
+  color: #666;
+
+  margin-bottom: 25px;
+
+}
+
+.suggestion-input {
+
+  border-radius: 10px;
+
+  padding: 12px;
+
+}
+
+.suggestion-btn {
+
+  background: var(--pink);
+
+  color: white;
+
+  padding: 12px 30px;
+
+  border-radius: 20px;
+
+  font-weight: 600;
+
+}
+
+.suggestion-btn:hover {
+
+  opacity: 0.9;
+
+}
+
+.success-box {
+
+  background: #e6fff2;
+
+  border: 1px solid #00c851;
+
+  color: #006b2d;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+
+}
+
+.error-box {
+
+  background: #ffe6e6;
+
+  border: 1px solid #ff4444;
+
+  color: #8b0000;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+
+}
+
+.error-text {
+
+  color: #ff4444;
+
+  font-size: 12px;
+
+}
+
+.suggestion-btn:disabled {
+
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+}

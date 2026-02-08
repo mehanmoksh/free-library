@@ -1,0 +1,58 @@
+<div
+  class="book-card position-relative"
+  [class.book-highlight]="book.highlighted"
+  (click)="goToDetail()"
+>
+  <span
+    *ngIf="book.isFeatured && !book.isNew"
+    class="featured-badge"
+  >
+    Featured
+  </span>
+
+  <!-- Eye Icon (popup trigger only) -->
+  <i
+    class="bi bi-eye eye-icon"
+    (click)="$event.stopPropagation(); openPopup()"
+  ></i>
+
+  <!-- new tag -->
+
+    <span
+    *ngIf="book.isNew"
+    class="new-badge"
+  >
+    NEW
+  </span>
+
+  <!-- Image -->
+  <img
+    [src]="book.image"
+    alt="{{ book.title }}"
+    class="book-img"
+  />
+
+  <!-- Info -->
+  <div class="p-2 book-content">
+    <h6 class="fw-bold mb-1 title_in_book_card">
+      {{ book.title }}
+    </h6>
+     <h6 class="fw-bold author_in_book_card">
+      by {{ book.author }}
+    </h6>
+    <span
+      *ngFor="let cat of book.category"
+      class="badge bg-pink me-1 bagde_in_book_card"
+    >
+      {{ cat }}
+    </span>
+  </div>
+
+</div>
+
+<!-- Popup -->
+<app-book-popup
+  *ngIf="book.showPopup"
+  [book]="book"
+  (close)="closePopup()"
+></app-book-popup>

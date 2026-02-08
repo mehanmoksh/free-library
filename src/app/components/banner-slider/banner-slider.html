@@ -1,0 +1,47 @@
+<div class="banner-wrapper">
+
+  <!-- LEFT ARROW -->
+  <button
+    class="banner-arrow left"
+    (click)="prevSlide()"
+  >
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <!-- SLIDER -->
+  <div class="banner-container">
+
+    <div
+      class="banner-slide"
+      *ngFor="let book of books; let i = index"
+      [class.active]="i === currentIndex"
+    >
+
+      <img [src]="book.image" class="banner-img">
+
+      <div class="banner-content">
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.summary }}</p>
+
+        <span
+          *ngFor="let cat of book.category"
+          class="badge bg-pink"
+        >
+          {{ cat }}
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT ARROW -->
+  <button
+    class="banner-arrow right"
+    (click)="nextSlide()"
+  >
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>

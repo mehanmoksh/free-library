@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --pink: #ff6fae;
+  --light-pink: #ffe6f0;
+  --white: #ffffff;
+  --dark: #333;
+}
+
+body {
+  background-color: var(--light-pink);
+  font-family: 'Poppins', sans-serif;
+}
+
+.glow-border {
+  border: 2px solid var(--pink);
+  box-shadow: 0 0 15px rgba(255, 111, 174, 0.7);
+}
+
+/* .blur-bg {
+  filter: blur(6px);
+} */
+
+.glow-border {
+  border: 2px solid var(--pink);
+  box-shadow: 0 0 20px rgba(255, 111, 174, 0.8);
+}
+
+
+h4,h3 {
+  color: var(--pink);
+}
+
+/*card & popup_css*/
+.author_in_book_card{
+  color: #ff6fae;
+  margin-top: 10px;
+}
+
+.author_in_book_card{
+  color: #ff6fae;
+  margin-top: 10px;
+}
+.title_in_book_card{
+  margin-top: 10px;
+}
+
+.bagde_in_book_card{
+  background: skyblue;
+}
+
+.view_detail_smry:hover{
+  background: skyblue !important;
+}
+
+
+/* no results */
+
+.no-results {
+
+  text-align: center;
+
+  /* padding: 60px 20px; */
+  padding-top: 60px;
+
+  color: #555;
+
+}
+
+.no-results a {
+
+  color: var(--pink);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+/* featured section */
+
+.featured-section {
+
+  padding: 20px;
+
+  background: linear-gradient(
+    to right,
+    rgba(255,20,147,0.03),
+    rgba(255,255,255,1)
+  );
+
+  border-radius: 16px;
+
+}
+
+.featured-section h3 {
+
+  font-size: 26px;
+
+}
+
+.featured-section .text-muted {
+
+  font-size: 15px;
+
+}
+
+@media (max-width: 576px){
+  .developer_pick_content{
+    text-align: center;
+  }
+
+  .featured-section {
+    background: linear-gradient(to right, rgba(255, 20, 147, 0.03), rgba(255, 255, 255, 0.4));
+  }
+
+  .text-center-text-class{
+    text-align: center;
+  }
+  .category_wrapper{
+    margin-top: 2rem !important;
+  }
+}

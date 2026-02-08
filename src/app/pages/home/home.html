@@ -1,0 +1,126 @@
+<!-- HERO BANNER -->
+<section class="about-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <h1 class="hero-title">Discover Powerful Ideas From The World's Greatest Books</h1>
+
+    <p class="hero-subtitle">
+      FreeLibrary transforms complex books into clear, structured, and beautiful summaries — helping
+      you learn faster, grow smarter, and unlock life-changing knowledge.
+    </p>
+  </div>
+</section>
+
+<!-- home slider -->
+<div class="container my-4">
+  <!-- banner slider -->
+
+  <app-banner-slider></app-banner-slider>
+
+  <!-- Featured Books -->
+  <section class="container mt-5 featured-section">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="developer_pick_content">
+        <h3 class="fw-bold mb-1">⭐ Developer’s Top Picks</h3>
+
+        <p class="text-muted mb-0">
+          Hand-picked books that shaped thinking, discipline, and perspective.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of featuredBooks">
+        <app-book-card [book]="book"></app-book-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- filter section -->
+  <section class="filter-section container mt-5">
+    <h3 class="section-title filter_title">Filter by your choices</h3>
+
+    <div class="row mt-4">
+      <!-- Authors Card -->
+      <div class="col-md-6 mb-4">
+        <div class="filter-card" routerLink="/authors">
+          <h4>Filter by Authors</h4>
+
+          <p>Explore books from your favorite authors.</p>
+        </div>
+      </div>
+
+      <!-- Categories Card -->
+      <div class="col-md-6 mb-4">
+        <div class="filter-card" routerLink="/all_categories">
+          <h4>Filter by Categories</h4>
+
+          <p>Discover books based on categories you love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- famous reads  -->
+
+  <h3 class="mt-4 mb-5 fw-bold text-center famous_reads_heading">Famous Reads</h3>
+
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of visibleBooks">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+
+  <div *ngIf="visibleBooks.length === 0" class="no-results">
+    <h4>Searched Book - Not Found. Missing your favourite read???</h4>
+
+    <p>
+      Give us your suggestion
+      <a href="/#suggestion-section-id"> here</a>
+    </p>
+
+    <p>
+      Meantime, explore
+      <a routerLink="/latest_reads" (click)="clearSearch()"> Latest Reads </a>
+    </p>
+  </div>
+
+  <div class="text-center mt-4">
+    <button *ngIf="!showAll" class="btn btn-outline-pink rounded-pill px-4 check_all_books" (click)="showMore()">
+      Check all books
+    </button>
+  </div>
+</div>
+
+<!-- add on money and spiritual -->
+
+<!-- Best in Spirituality -->
+<section class="container mt-5">
+  <h3 class="section-title mt-4 mb-5 fw-bold text-center famous_reads_heading">
+    <i class="bi bi-stars text-success dollar_icon"></i>
+    Best in Spirituality
+  </h3>
+
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of bestSpiritualBooks">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+</section>
+
+<!-- Best in Money -->
+<section class="container mt-5">
+  <h3 class="section-title mt-4 mb-5 fw-bold text-center famous_reads_heading">
+    <i class="bi bi-currency-dollar text-warning dollar_icon"></i>
+    Best in Money
+  </h3>
+
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of bestMoneyBooks">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+</section>
+
+<app-suggestion-section></app-suggestion-section>

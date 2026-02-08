@@ -1,0 +1,65 @@
+<div class="container mt-5 book_detail_wrapper" *ngIf="book">
+  <div class="row align-items-center">
+    <!-- IMAGE -->
+    <div class="col-md-4 text-center position-relative image_wrapper_book_detail">
+      <!-- Developer Tip Badge -->
+      <span *ngIf="isDeveloperTip" class="developer-pick-badge"> ⭐ Developer’s Top Pick </span>
+
+      <img [src]="book.image" class="detail-img shadow" />
+    </div>
+
+    <!-- INFO -->
+    <div class="col-md-8">
+      <h2 class="fw-bold mb-3">
+        {{ book.title }}
+      </h2>
+
+      <div class="mb-3">
+        <span *ngFor="let cat of book.category" class="badge bg-pink me-2">
+          {{ cat }}
+        </span>
+      </div>
+
+      <p class="detail-summary">
+        {{ book.fullSummary }}
+      </p>
+
+      <p class="detail-summary credit_summary text-muted" style="font-size: 14px;">
+        Kindle links are provided only for books that are available on Kindle. Book cover images are sourced from Amazon and publicly available internet sources and are used for informational purposes only. All rights belong to their respective owners.
+      </p>
+
+      <div class="author-signature">
+
+        — Written by
+        <span class="author-name">
+          {{ book.author }}
+        </span>
+
+      </div>
+
+
+      <!-- BUY BUTTONS -->
+      <div class="mt-4 d-flex gap-3 flex-wrap">
+        <a [href]="book.amazonLink" target="_blank" class="btn btn-buy"> Buy on Amazon </a>
+
+        <a [href]="book.kindleLink" target="_blank" class="btn btn-buy"> Read on Kindle </a>
+
+        <!-- <a [href]="book.googleBooksLink" target="_blank" class="btn btn-buy">
+          View on Google Books
+        </a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MORE BOOKS SECTION -->
+
+<div class="container mt-5">
+  <h4 class="fw-bold mb-4 text-center">Check out more books</h4>
+
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of otherBooks">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+</div>

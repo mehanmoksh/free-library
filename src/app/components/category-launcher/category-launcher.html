@@ -1,0 +1,32 @@
+<div class="launcher-container">
+
+  <!-- Floating Button -->
+  <div
+    class="launcher-btn"
+    (click)="toggleMenu($event)"
+  >
+    <i class="bi bi-book"></i>
+  </div>
+
+  <!-- Fan Categories -->
+  <div class="fan-container" [class.open]="isOpen">
+
+    <div
+      class="fan-item"
+      *ngFor="let category of categories; let i = index"
+      [style.transform]="getTransform(i)"
+      (click)="openCategory(category)"
+    >
+      <div class="fan-icon">
+        <i [class]="category.icon"></i>
+      </div>
+
+      <span class="fan-label">
+        {{ category.name }}
+      </span>
+
+    </div>
+
+  </div>
+
+</div>

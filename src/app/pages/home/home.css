@@ -1,0 +1,162 @@
+/* home.component.css */
+.btn-outline-pink {
+  border: 2px solid var(--pink);
+  color: var(--pink);
+}
+
+
+/* filter section */
+
+.filter-card {
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  border: 2px solid #ffe6f2;
+
+}
+
+.filter-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: var(--pink);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+}
+
+.section-title {
+
+  font-weight: 700;
+
+}
+
+/*her banner*/
+/* HERO SECTION */
+
+.about-hero {
+
+  height: 420px;
+
+  background-image: url('/assets/images/books/about-banner.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+
+}
+
+.hero-overlay {
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.4)
+  );
+
+}
+
+.hero-content {
+
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero-title {
+
+  font-size: 48px;
+  font-weight: 700;
+
+  max-width: 700px;
+
+}
+
+.hero-subtitle {
+
+  font-size: 20px;
+
+  margin-top: 20px;
+
+  max-width: 600px;
+
+  opacity: 0.9;
+
+}
+
+
+/* no results */
+
+.no-results {
+
+  text-align: center;
+
+  /* padding: 60px 20px; */
+  padding-top: 60px;
+
+  color: #555;
+
+}
+
+.no-results a {
+
+  color: var(--pink);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+.dollar_icon{
+  color: #ff6fae !important;
+}
+
+.check_all_books:hover{
+  background: skyblue;
+  color: white;
+  border: skyblue;
+}
+/* ========================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================= */
+
+@media(max-width: 993px){
+  .hero-title{
+    font-size: 32px;
+  }
+  .hero-subtitle{
+    font-size: 16px;
+  }
+  .home-content{
+    padding-left: 16px;
+  }
+
+  .filter_title{
+    text-align: center;
+  }
+}
+
+
+@media(max-width: 576px){
+  .famous_reads_heading{
+    margin-bottom: 2rem !important;
+  }
+}

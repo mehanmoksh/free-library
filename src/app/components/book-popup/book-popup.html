@@ -1,0 +1,31 @@
+<div class="popup-backdrop" (click)="closePopup()">
+
+  <div class="popup-card" (click)="$event.stopPropagation()">
+
+    <i
+      class="bi bi-eye-slash close-icon"
+      (click)="closePopup()"
+    ></i>
+
+    <img [src]="book.image" class="popup-img" />
+
+    <h5 class="fw-bold mt-3">{{ book.title }}</h5>
+
+    <p>{{ book.summary }}</p>
+
+    <span
+      *ngFor="let cat of book.category"
+      class="badge bg-pink me-1 bagde_in_book_card"
+    >
+      {{ cat }}
+    </span>
+
+    <div class="text-center mt-3">
+      <button class="btn btn-pink rounded-pill px-4 view_detail_smry" class="btn btn-pink rounded-pill px-4"
+  (click)="viewDetail()">
+        View Detailed Summary
+      </button>
+    </div>
+
+  </div>
+</div>

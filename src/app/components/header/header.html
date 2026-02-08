@@ -1,0 +1,46 @@
+<nav class="navbar bg-white shadow-sm px-4 py-3 d-flex align-items-center justify-content-between">
+  <!-- LEFT: Logo -->
+  <span class="navbar-brand fw-bold text-pink" routerLink="/" style="cursor: pointer">
+    FreeLibrary()
+  </span>
+
+  <!-- CENTER: Search -->
+  <div class="search-container">
+    <input
+      #searchInput
+      type="text"
+      class="form-control header-search"
+      placeholder="Search for your favourite book..."
+      (input)="onSearch($event)"
+      (focus)="showSuggestions = true"
+    />
+
+      <!-- Clear button -->
+      <i
+        class="bi bi-x-circle-fill clear-search"
+        *ngIf="searchInput?.value"
+        (click)="clearSearch()"
+      ></i>
+
+    <!-- Suggestions Dropdown -->
+    <div class="suggestions-dropdown" *ngIf="showSuggestions && suggestions.length">
+      <div class="suggestion-item" *ngFor="let book of suggestions" (click)="selectBook(book)">
+        <img [src]="book.image" />
+
+        <div>
+          <div class="title highlight_search_title">{{ book.title }}</div>
+          <div class="author">{{ book.author }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Menu Icon -->
+  <div class="menu-icon" (click)="openMenu()">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+  </div>
+</nav>
+
+<app-fullscreen-menu *ngIf="menuOpen" (close)="closeMenu()"> </app-fullscreen-menu>

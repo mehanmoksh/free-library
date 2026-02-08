@@ -1,0 +1,65 @@
+/* book-popup.component.css */
+.popup-backdrop {
+ position: fixed;
+  inset: 0;
+  background: rgba(255, 246, 250, 0.75); /* soft pink-white */
+  /* backdrop-filter: blur(2.5px); */
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-card {
+  background: white;
+  width: 360px;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  animation: popupEnter 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@keyframes popupEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 20px;
+  color: var(--pink);
+  cursor: pointer;
+}
+
+.btn-pink {
+  background: var(--pink);
+  color: white;
+}
+
+/* .view_detail_smry:hover{
+  background: skyblue;
+}
+
+popup-backdrop:hover .btn-pink {
+  background: skyblue;
+} */
+
+@media (max-width: 500px){
+  .popup-backdrop{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
